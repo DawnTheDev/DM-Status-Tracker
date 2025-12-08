@@ -1,0 +1,1120 @@
+[gd_scene load_steps=22 format=3 uid="uid://b18f80l0h1wdd"]
+
+[ext_resource type="Script" uid="uid://docvqjif4he71" path="res://scripts/handler.gd" id="1_jjgbg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_21xkr"]
+font_size = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjgbg"]
+bg_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2yge"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_kry3j"]
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjvhh"]
+bg_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_jjgbg"]
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kry3j"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0.4392157)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xm2m"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_8gbba"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_jjvhh"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_6bp64"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_344ge"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_ynf5e"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_hptm8"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_6iyac"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_fdnlq"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_d1ilt"]
+font_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bo1nx"]
+bg_color = Color(0.3647059, 0.3647059, 0.3647059, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_bo1nx"]
+font_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8gbba"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0.41568628)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jjgbg")
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 647.0
+color = Color(0.12591085, 0.12591085, 0.12591082, 1)
+
+[node name="title" type="Label" parent="bg"]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 42.0
+offset_right = 719.0
+offset_bottom = 96.0
+text = "BLOOD TRACKER"
+label_settings = SubResource("LabelSettings_21xkr")
+
+[node name="EditWindow" type="Panel" parent="bg"]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 413.0
+offset_top = 198.0
+offset_right = 781.0
+offset_bottom = 439.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jjgbg")
+
+[node name="Label" type="Label" parent="bg/EditWindow"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 16.0
+offset_right = 273.0
+offset_bottom = 51.0
+text = "TRACKER EDIT"
+label_settings = SubResource("LabelSettings_h2yge")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="bg/EditWindow"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 122.0
+offset_right = 180.0
+offset_bottom = 157.0
+text = "Max blood"
+label_settings = SubResource("LabelSettings_h2yge")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="LineEdit" parent="bg/EditWindow"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 76.0
+offset_right = 308.0
+offset_bottom = 107.0
+placeholder_text = "Name"
+alignment = 1
+
+[node name="EditConfirm" type="Button" parent="bg/EditWindow"]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 195.0
+offset_right = 348.0
+offset_bottom = 226.0
+text = "Confirm"
+
+[node name="EditCancel" type="Button" parent="bg/EditWindow"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 195.0
+offset_right = 88.0
+offset_bottom = 226.0
+text = "Cancel"
+
+[node name="MaxBlood" type="SpinBox" parent="bg/EditWindow"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 125.0
+offset_right = 278.5625
+offset_bottom = 156.0
+max_value = 1000000.0
+alignment = 1
+
+[node name="Error" type="Label" parent="bg/EditWindow"]
+visible = false
+layout_mode = 0
+offset_left = 87.0
+offset_top = 50.0
+offset_right = 289.0
+offset_bottom = 73.0
+text = "Name must not be empty."
+label_settings = SubResource("LabelSettings_kry3j")
+
+[node name="RateEditWindow" type="Panel" parent="bg"]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 243.0
+offset_top = 111.0
+offset_right = 971.0
+offset_bottom = 561.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jjvhh")
+
+[node name="Label" type="Label" parent="bg/RateEditWindow"]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 19.0
+offset_right = 404.0
+offset_bottom = 47.0
+text = "RATE EDIT"
+label_settings = SubResource("LabelSettings_h2yge")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RateAddConfig" type="Control" parent="bg/RateEditWindow"]
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 61.0
+offset_right = 698.0
+offset_bottom = 95.0
+
+[node name="Source" type="LineEdit" parent="bg/RateEditWindow/RateAddConfig"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 491.0
+offset_bottom = 32.0
+placeholder_text = "Source"
+alignment = 1
+
+[node name="rate" type="SpinBox" parent="bg/RateEditWindow/RateAddConfig"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 3.0
+offset_right = 606.5625
+offset_bottom = 34.0
+min_value = -1000000.0
+max_value = 1000000.0
+step = 0.0
+alignment = 1
+
+[node name="add" type="Button" parent="bg/RateEditWindow/RateAddConfig"]
+layout_mode = 0
+offset_left = 620.0
+offset_top = 2.0
+offset_right = 673.0
+offset_bottom = 33.0
+text = "ADD"
+
+[node name="Error" type="Label" parent="bg/RateEditWindow/RateAddConfig"]
+visible = false
+layout_mode = 0
+offset_left = 443.0
+offset_top = -30.0
+offset_right = 668.0
+offset_bottom = -7.0
+text = "PLACEHOLDER"
+label_settings = SubResource("LabelSettings_jjgbg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SourcesList" type="ItemList" parent="bg/RateEditWindow"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 111.0
+offset_right = 703.0
+offset_bottom = 402.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kry3j")
+item_count = 3
+item_0/text = "1"
+item_1/text = "2"
+item_2/text = "3"
+
+[node name="Delete" type="Button" parent="bg/RateEditWindow"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 411.0
+offset_right = 86.0
+offset_bottom = 442.0
+text = "Delete"
+
+[node name="Close" type="Button" parent="bg/RateEditWindow"]
+layout_mode = 0
+offset_left = 645.0
+offset_top = 411.0
+offset_right = 704.0
+offset_bottom = 442.0
+text = "Close"
+
+[node name="Trackers" type="Control" parent="bg"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1" type="Label" parent="bg/Trackers"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 127.0
+offset_right = 217.0
+offset_bottom = 162.0
+text = "TRACKER 1"
+label_settings = SubResource("LabelSettings_0xm2m")
+metadata/id = 1
+
+[node name="Bin" type="Label" parent="bg/Trackers/1"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 39.0
+offset_right = 135.0
+offset_bottom = 74.0
+text = "Blood rate:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Bin2" type="Label" parent="bg/Trackers/1"]
+layout_mode = 0
+offset_left = -43.0
+offset_top = 76.0
+offset_right = 37.0
+offset_bottom = 111.0
+text = "Blood:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Blood" type="Label" parent="bg/Trackers/1"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 76.0
+offset_right = 160.0
+offset_bottom = 111.0
+text = "MaxBlood"
+label_settings = SubResource("LabelSettings_8gbba")
+
+[node name="rate" type="Label" parent="bg/Trackers/1"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 41.0
+offset_right = 185.0
+offset_bottom = 76.0
+text = "+2"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="2" type="Label" parent="bg/Trackers"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 313.0
+offset_right = 217.0
+offset_bottom = 348.0
+text = "TRACKER 2"
+label_settings = SubResource("LabelSettings_0xm2m")
+metadata/id = 1
+
+[node name="Bin" type="Label" parent="bg/Trackers/2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 39.0
+offset_right = 135.0
+offset_bottom = 74.0
+text = "Blood rate:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Bin2" type="Label" parent="bg/Trackers/2"]
+layout_mode = 0
+offset_left = -43.0
+offset_top = 76.0
+offset_right = 37.0
+offset_bottom = 111.0
+text = "Blood:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Blood" type="Label" parent="bg/Trackers/2"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 76.0
+offset_right = 160.0
+offset_bottom = 111.0
+text = "MaxBlood"
+label_settings = SubResource("LabelSettings_jjvhh")
+
+[node name="rate" type="Label" parent="bg/Trackers/2"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 41.0
+offset_right = 185.0
+offset_bottom = 76.0
+text = "+2"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="3" type="Label" parent="bg/Trackers"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 475.0
+offset_right = 217.0
+offset_bottom = 510.0
+text = "TRACKER 3"
+label_settings = SubResource("LabelSettings_0xm2m")
+metadata/id = 1
+
+[node name="Bin" type="Label" parent="bg/Trackers/3"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 39.0
+offset_right = 135.0
+offset_bottom = 74.0
+text = "Blood rate:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Bin2" type="Label" parent="bg/Trackers/3"]
+layout_mode = 0
+offset_left = -43.0
+offset_top = 76.0
+offset_right = 37.0
+offset_bottom = 111.0
+text = "Blood:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Blood" type="Label" parent="bg/Trackers/3"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 76.0
+offset_right = 160.0
+offset_bottom = 111.0
+text = "MaxBlood"
+label_settings = SubResource("LabelSettings_6bp64")
+
+[node name="rate" type="Label" parent="bg/Trackers/3"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 41.0
+offset_right = 185.0
+offset_bottom = 76.0
+text = "+2"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="4" type="Label" parent="bg/Trackers"]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 127.0
+offset_right = 632.0
+offset_bottom = 162.0
+text = "TRACKER 4"
+label_settings = SubResource("LabelSettings_0xm2m")
+metadata/id = 1
+
+[node name="Bin" type="Label" parent="bg/Trackers/4"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 39.0
+offset_right = 135.0
+offset_bottom = 74.0
+text = "Blood rate:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Bin2" type="Label" parent="bg/Trackers/4"]
+layout_mode = 0
+offset_left = -43.0
+offset_top = 76.0
+offset_right = 37.0
+offset_bottom = 111.0
+text = "Blood:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Blood" type="Label" parent="bg/Trackers/4"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 76.0
+offset_right = 160.0
+offset_bottom = 111.0
+text = "MaxBlood"
+label_settings = SubResource("LabelSettings_344ge")
+
+[node name="rate" type="Label" parent="bg/Trackers/4"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 41.0
+offset_right = 185.0
+offset_bottom = 76.0
+text = "+2"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="5" type="Label" parent="bg/Trackers"]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 309.0
+offset_right = 632.0
+offset_bottom = 344.0
+text = "TRACKER 5"
+label_settings = SubResource("LabelSettings_0xm2m")
+metadata/id = 1
+
+[node name="Bin" type="Label" parent="bg/Trackers/5"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 39.0
+offset_right = 135.0
+offset_bottom = 74.0
+text = "Blood rate:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Bin2" type="Label" parent="bg/Trackers/5"]
+layout_mode = 0
+offset_left = -43.0
+offset_top = 76.0
+offset_right = 37.0
+offset_bottom = 111.0
+text = "Blood:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Blood" type="Label" parent="bg/Trackers/5"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 76.0
+offset_right = 160.0
+offset_bottom = 111.0
+text = "MaxBlood"
+label_settings = SubResource("LabelSettings_ynf5e")
+
+[node name="rate" type="Label" parent="bg/Trackers/5"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 41.0
+offset_right = 185.0
+offset_bottom = 76.0
+text = "+2"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="6" type="Label" parent="bg/Trackers"]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 476.0
+offset_right = 632.0
+offset_bottom = 511.0
+text = "TRACKER 6"
+label_settings = SubResource("LabelSettings_0xm2m")
+metadata/id = 1
+
+[node name="Bin" type="Label" parent="bg/Trackers/6"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 39.0
+offset_right = 135.0
+offset_bottom = 74.0
+text = "Blood rate:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Bin2" type="Label" parent="bg/Trackers/6"]
+layout_mode = 0
+offset_left = -43.0
+offset_top = 76.0
+offset_right = 37.0
+offset_bottom = 111.0
+text = "Blood:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Blood" type="Label" parent="bg/Trackers/6"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 76.0
+offset_right = 160.0
+offset_bottom = 111.0
+text = "MaxBlood"
+label_settings = SubResource("LabelSettings_hptm8")
+
+[node name="rate" type="Label" parent="bg/Trackers/6"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 41.0
+offset_right = 185.0
+offset_bottom = 76.0
+text = "+2"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="8" type="Label" parent="bg/Trackers"]
+layout_mode = 0
+offset_left = 899.0
+offset_top = 311.0
+offset_right = 1028.0
+offset_bottom = 346.0
+text = "TRACKER 8"
+label_settings = SubResource("LabelSettings_0xm2m")
+metadata/id = 1
+
+[node name="Bin" type="Label" parent="bg/Trackers/8"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 39.0
+offset_right = 135.0
+offset_bottom = 74.0
+text = "Blood rate:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Bin2" type="Label" parent="bg/Trackers/8"]
+layout_mode = 0
+offset_left = -43.0
+offset_top = 76.0
+offset_right = 37.0
+offset_bottom = 111.0
+text = "Blood:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Blood" type="Label" parent="bg/Trackers/8"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 76.0
+offset_right = 160.0
+offset_bottom = 111.0
+text = "MaxBlood"
+label_settings = SubResource("LabelSettings_6iyac")
+
+[node name="rate" type="Label" parent="bg/Trackers/8"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 41.0
+offset_right = 185.0
+offset_bottom = 76.0
+text = "+2"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="7" type="Label" parent="bg/Trackers"]
+layout_mode = 0
+offset_left = 899.0
+offset_top = 129.0
+offset_right = 1028.0
+offset_bottom = 164.0
+text = "TRACKER 7"
+label_settings = SubResource("LabelSettings_0xm2m")
+metadata/id = 1
+
+[node name="Bin" type="Label" parent="bg/Trackers/7"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 39.0
+offset_right = 135.0
+offset_bottom = 74.0
+text = "Blood rate:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Bin2" type="Label" parent="bg/Trackers/7"]
+layout_mode = 0
+offset_left = -43.0
+offset_top = 76.0
+offset_right = 37.0
+offset_bottom = 111.0
+text = "Blood:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Blood" type="Label" parent="bg/Trackers/7"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 76.0
+offset_right = 160.0
+offset_bottom = 111.0
+text = "MaxBlood"
+label_settings = SubResource("LabelSettings_fdnlq")
+
+[node name="rate" type="Label" parent="bg/Trackers/7"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 41.0
+offset_right = 185.0
+offset_bottom = 76.0
+text = "+2"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="9" type="Label" parent="bg/Trackers"]
+layout_mode = 0
+offset_left = 899.0
+offset_top = 478.0
+offset_right = 1028.0
+offset_bottom = 513.0
+text = "TRACKER 9"
+label_settings = SubResource("LabelSettings_0xm2m")
+metadata/id = 1
+
+[node name="Bin" type="Label" parent="bg/Trackers/9"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 39.0
+offset_right = 135.0
+offset_bottom = 74.0
+text = "Blood rate:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Bin2" type="Label" parent="bg/Trackers/9"]
+layout_mode = 0
+offset_left = -43.0
+offset_top = 76.0
+offset_right = 37.0
+offset_bottom = 111.0
+text = "Blood:"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="Blood" type="Label" parent="bg/Trackers/9"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 76.0
+offset_right = 160.0
+offset_bottom = 111.0
+text = "MaxBlood"
+label_settings = SubResource("LabelSettings_d1ilt")
+
+[node name="rate" type="Label" parent="bg/Trackers/9"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 41.0
+offset_right = 185.0
+offset_bottom = 76.0
+text = "+2"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
+
+[node name="EditButtons" type="Control" parent="bg"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="t1edit" type="Button" parent="bg/EditButtons"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 130.0
+offset_right = 82.0
+offset_bottom = 161.0
+text = "Edit"
+metadata/id = 1
+
+[node name="t1edit2" type="Button" parent="bg/EditButtons"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 315.0
+offset_right = 82.0
+offset_bottom = 346.0
+text = "Edit"
+metadata/id = 2
+
+[node name="t1edit3" type="Button" parent="bg/EditButtons"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 478.0
+offset_right = 81.0
+offset_bottom = 509.0
+text = "Edit"
+metadata/id = 3
+
+[node name="t1edit4" type="Button" parent="bg/EditButtons"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 482.0
+offset_right = 498.0
+offset_bottom = 513.0
+text = "Edit"
+metadata/id = 6
+
+[node name="t1edit5" type="Button" parent="bg/EditButtons"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 311.0
+offset_right = 498.0
+offset_bottom = 342.0
+text = "Edit"
+metadata/id = 5
+
+[node name="t1edit6" type="Button" parent="bg/EditButtons"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 132.0
+offset_right = 498.0
+offset_bottom = 163.0
+text = "Edit"
+metadata/id = 4
+
+[node name="t1edit7" type="Button" parent="bg/EditButtons"]
+layout_mode = 0
+offset_left = 854.0
+offset_top = 132.0
+offset_right = 892.0
+offset_bottom = 163.0
+text = "Edit"
+metadata/id = 7
+
+[node name="t1edit8" type="Button" parent="bg/EditButtons"]
+layout_mode = 0
+offset_left = 855.0
+offset_top = 314.0
+offset_right = 893.0
+offset_bottom = 345.0
+text = "Edit"
+metadata/id = 8
+
+[node name="t1edit9" type="Button" parent="bg/EditButtons"]
+layout_mode = 0
+offset_left = 853.0
+offset_top = 478.0
+offset_right = 891.0
+offset_bottom = 509.0
+text = "Edit"
+metadata/id = 9
+
+[node name="RateEditButtons" type="Control" parent="bg"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="t1rateedit" type="Button" parent="bg/RateEditButtons"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 169.0
+offset_right = 82.0
+offset_bottom = 200.0
+text = "Edit"
+metadata/id = 1
+
+[node name="t1rateedit2" type="Button" parent="bg/RateEditButtons"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 354.0
+offset_right = 82.0
+offset_bottom = 385.0
+text = "Edit"
+metadata/id = 2
+
+[node name="t1rateedit3" type="Button" parent="bg/RateEditButtons"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 517.0
+offset_right = 81.0
+offset_bottom = 548.0
+text = "Edit"
+metadata/id = 3
+
+[node name="t1rateedit4" type="Button" parent="bg/RateEditButtons"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 521.0
+offset_right = 498.0
+offset_bottom = 552.0
+text = "Edit"
+metadata/id = 6
+
+[node name="t1rateedit5" type="Button" parent="bg/RateEditButtons"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 350.0
+offset_right = 498.0
+offset_bottom = 381.0
+text = "Edit"
+metadata/id = 5
+
+[node name="t1rateedit6" type="Button" parent="bg/RateEditButtons"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 171.0
+offset_right = 498.0
+offset_bottom = 202.0
+text = "Edit"
+metadata/id = 4
+
+[node name="t1rateedit7" type="Button" parent="bg/RateEditButtons"]
+layout_mode = 0
+offset_left = 854.0
+offset_top = 171.0
+offset_right = 892.0
+offset_bottom = 202.0
+text = "Edit"
+metadata/id = 7
+
+[node name="t1rateedit8" type="Button" parent="bg/RateEditButtons"]
+layout_mode = 0
+offset_left = 855.0
+offset_top = 353.0
+offset_right = 893.0
+offset_bottom = 384.0
+text = "Edit"
+metadata/id = 8
+
+[node name="t1rateedit9" type="Button" parent="bg/RateEditButtons"]
+layout_mode = 0
+offset_left = 853.0
+offset_top = 517.0
+offset_right = 891.0
+offset_bottom = 548.0
+text = "Edit"
+metadata/id = 9
+
+[node name="ApplyButtons" type="Control" parent="bg"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="t1apply" type="Button" parent="bg/ApplyButtons"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 247.0
+offset_right = 213.0
+offset_bottom = 278.0
+text = "Apply"
+metadata/id = 1
+
+[node name="t1apply2" type="Button" parent="bg/ApplyButtons"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 432.0
+offset_right = 213.0
+offset_bottom = 463.0
+text = "Apply"
+metadata/id = 2
+
+[node name="t1apply3" type="Button" parent="bg/ApplyButtons"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 595.0
+offset_right = 212.0
+offset_bottom = 626.0
+text = "Apply"
+metadata/id = 3
+
+[node name="t1apply4" type="Button" parent="bg/ApplyButtons"]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 599.0
+offset_right = 629.0
+offset_bottom = 630.0
+text = "Apply"
+metadata/id = 6
+
+[node name="t1apply5" type="Button" parent="bg/ApplyButtons"]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 428.0
+offset_right = 629.0
+offset_bottom = 459.0
+text = "Apply"
+metadata/id = 5
+
+[node name="t1apply6" type="Button" parent="bg/ApplyButtons"]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 249.0
+offset_right = 629.0
+offset_bottom = 280.0
+text = "Apply"
+metadata/id = 4
+
+[node name="t1apply7" type="Button" parent="bg/ApplyButtons"]
+layout_mode = 0
+offset_left = 971.0
+offset_top = 249.0
+offset_right = 1023.0
+offset_bottom = 280.0
+text = "Apply"
+metadata/id = 7
+
+[node name="t1apply8" type="Button" parent="bg/ApplyButtons"]
+layout_mode = 0
+offset_left = 972.0
+offset_top = 431.0
+offset_right = 1024.0
+offset_bottom = 462.0
+text = "Apply"
+metadata/id = 8
+
+[node name="t1apply9" type="Button" parent="bg/ApplyButtons"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 595.0
+offset_right = 1022.0
+offset_bottom = 626.0
+text = "Apply"
+metadata/id = 9
+
+[node name="ResetButtons" type="Control" parent="bg"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="t1reset" type="Button" parent="bg/ResetButtons"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 247.0
+offset_right = 121.0
+offset_bottom = 278.0
+text = "Reset"
+metadata/id = 1
+
+[node name="t1reset2" type="Button" parent="bg/ResetButtons"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 432.0
+offset_right = 121.0
+offset_bottom = 463.0
+text = "Reset"
+metadata/id = 2
+
+[node name="t1reset3" type="Button" parent="bg/ResetButtons"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 595.0
+offset_right = 120.0
+offset_bottom = 626.0
+text = "Reset"
+metadata/id = 3
+
+[node name="t1reset4" type="Button" parent="bg/ResetButtons"]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 599.0
+offset_right = 537.0
+offset_bottom = 630.0
+text = "Reset"
+metadata/id = 6
+
+[node name="t1reset5" type="Button" parent="bg/ResetButtons"]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 428.0
+offset_right = 537.0
+offset_bottom = 459.0
+text = "Reset"
+metadata/id = 5
+
+[node name="t1reset6" type="Button" parent="bg/ResetButtons"]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 249.0
+offset_right = 537.0
+offset_bottom = 280.0
+text = "Reset"
+metadata/id = 4
+
+[node name="t1reset7" type="Button" parent="bg/ResetButtons"]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 249.0
+offset_right = 931.0
+offset_bottom = 280.0
+text = "Reset"
+metadata/id = 7
+
+[node name="t1reset8" type="Button" parent="bg/ResetButtons"]
+layout_mode = 0
+offset_left = 881.0
+offset_top = 431.0
+offset_right = 932.0
+offset_bottom = 462.0
+text = "Reset"
+metadata/id = 8
+
+[node name="t1reset9" type="Button" parent="bg/ResetButtons"]
+layout_mode = 0
+offset_left = 879.0
+offset_top = 595.0
+offset_right = 930.0
+offset_bottom = 626.0
+text = "Reset"
+metadata/id = 9
+
+[node name="logs" type="Button" parent="bg"]
+layout_mode = 0
+offset_left = 1014.0
+offset_top = 35.0
+offset_right = 1100.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 30
+text = "LOGS"
+
+[node name="bg" type="Panel" parent="bg/logs"]
+visible = false
+z_index = 3
+layout_mode = 0
+offset_left = -821.0
+offset_top = 7.0
+offset_right = -123.0
+offset_bottom = 543.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bo1nx")
+
+[node name="Label" type="Label" parent="bg/logs/bg"]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 17.0
+offset_right = 387.0
+offset_bottom = 59.0
+text = "LOGS"
+label_settings = SubResource("LabelSettings_bo1nx")
+
+[node name="log" type="ItemList" parent="bg/logs/bg"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 73.0
+offset_right = 682.0
+offset_bottom = 519.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8gbba")
+
+[connection signal="pressed" from="bg/EditWindow/EditConfirm" to="." method="editconfirm"]
+[connection signal="pressed" from="bg/EditWindow/EditCancel" to="." method="editcancel"]
+[connection signal="pressed" from="bg/RateEditWindow/RateAddConfig/add" to="." method="_on_add_pressed"]
+[connection signal="pressed" from="bg/RateEditWindow/Delete" to="." method="onDelete"]
+[connection signal="pressed" from="bg/RateEditWindow/Close" to="." method="onClose"]
+[connection signal="pressed" from="bg/logs" to="." method="_on_logs_pressed"]

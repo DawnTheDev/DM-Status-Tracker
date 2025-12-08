@@ -1,0 +1,290 @@
+extends Control
+
+var selected: bool
+var current
+
+var TrackerPool = [
+	Singleton.Tracker1,
+	Singleton.Tracker2,
+	Singleton.Tracker3,
+	Singleton.Tracker4,
+	Singleton.Tracker5,
+	Singleton.Tracker6,
+	Singleton.Tracker7,
+	Singleton.Tracker8,
+	Singleton.Tracker9,
+	Singleton.Tracker10,
+	Singleton.Tracker11,
+	Singleton.Tracker12,
+	Singleton.Tracker13,
+	Singleton.Tracker14,
+	Singleton.Tracker15
+]
+
+@onready var CellPools = [
+	$ScrollContainer/HBoxContainer/TrackerCell1/cell,
+	$ScrollContainer/HBoxContainer/TrackerCell2/cell
+]
+
+var CurTracker
+
+@onready var nameWindow = $TrackerEditWindow
+@onready var BloodEditWindow = $BloodEditWindow
+@onready var RateEditWindow = $RateEditWindow
+@onready var EffectsEditWindow = $EffectsEditWindow
+@onready var SourceList = $RateEditWindow/SourceList
+
+var windowopened: bool
+var TempDict = {}
+
+func _ready() -> void:
+	var cells = $ScrollContainer/HBoxContainer.get_children()
+	for cell in cells:
+		var btn: Button = cell.get_node("Cell")
+		
+		btn.pressed.connect(_on_cell_pressed.bind(btn))
+
+func _physics_process(_delta: float) -> void:
+	if current == null: return
+	CurTracker = TrackerPool[current - 1]
+	#print(current)
+
+func _on_cell_pressed(btn: Button):
+	var id = btn.get_meta("id")
+	var panel = getCell(btn)
+	
+	
+	if not selected: #HAVE NOT SELECTED ANYTHING
+		var themeoverride = StyleBoxFlat.new()
+		themeoverride.bg_color = Color(0.082, 0.475, 0.082, 0.624)
+		themeoverride.set_corner_radius_all(15)
+		panel.remove_theme_stylebox_override("panel")
+		panel.add_theme_stylebox_override("panel", themeoverride)
+		
+		current = id
+		selected = not selected
+	
+	elif selected and current == id: #DESELECTING CUURENT PANEL
+		var themeoverride = StyleBoxFlat.new()
+		themeoverride.bg_color = Color(0.082, 0.082, 0.082, 0.624)
+		themeoverride.set_corner_radius_all(15)
+		panel.remove_theme_stylebox_override("panel")
+		panel.add_theme_stylebox_override("panel", themeoverride)
+		
+		current = null
+		CurTracker = null
+		selected = not selected
+	
+	else: #ALREADY SELECTED AND SELECT NEW ONE
+		var previousPanel = CellPools[current - 1]
+			
+		var themeoverride = StyleBoxFlat.new()
+		themeoverride.bg_color = Color(0.082, 0.082, 0.082, 0.624)
+		themeoverride.set_corner_radius_all(15)
+		previousPanel.remove_theme_stylebox_override("panel")
+		previousPanel.add_theme_stylebox_override("panel", themeoverride)
+		
+		var newthemeoverride = StyleBoxFlat.new()
+		newthemeoverride.bg_color = Color(0.082, 0.475, 0.082, 0.624)
+		newthemeoverride.set_corner_radius_all(15)
+		panel.remove_theme_stylebox_override("panel")
+		panel.add_theme_stylebox_override("panel", newthemeoverride)
+		
+		current = id
+		
+
+
+func _on_edit_name_pressed() -> void:
+	if current == null: return
+	if windowopened: return
+	
+	nameWindow.get_node("Name").text = ""
+	windowopened = true
+	nameWindow.visible = true
+	$TrackerEditWindow/Warning.visible = false
+
+
+func getCell(btn: Button):
+	var id = btn.get_meta("id")
+	
+	return CellPools[id - 1]
+
+func CleanText(text: String):
+	var cleanedtext = text.replace(" ", "")
+	
+	if cleanedtext == "":
+		return false
+	else:
+		return true
+
+func _on_t_confirm_pressed() -> void:
+	var customName = nameWindow.get_node("Name").text
+	if CleanText(customName):
+		CellPools[current - 1].get_node("Name").text = customName
+		
+		nameWindow.get_node("Name").text = ""
+		windowopened = false
+		nameWindow.visible = false
+		$TrackerEditWindow/Warning.visible = false
+	else:
+		$TrackerEditWindow/Warning.visible = true
+
+
+func _on_t_cancel_pressed() -> void:
+	nameWindow.get_node("Name").text = ""
+	windowopened = false
+	nameWindow.visible = false
+	$TrackerEditWindow/Warning.visible = false
+
+
+func _on_edit_blood_pressed() -> void:
+	if windowopened: return
+	
+	windowopened = true
+	BloodEditWindow.get_node("maxbloodamount").text = ""
+	BloodEditWindow.visible = true
+	$BloodEditWindow/Warning.visible = false
+
+
+func _on_b_confirm_pressed() -> void:
+	
+	if CleanText(BloodEditWindow.get_node("maxbloodamount").text):
+		
+		if not BloodEditWindow.get_node("maxbloodamount").text.is_valid_int():
+			$BloodEditWindow/Warning.visible = true
+			$BloodEditWindow/Warning.text = "Max blood must an int value."
+			return
+		
+		var maxblood = CellPools[current - 1].get_node("BloodPanel").get_node("maxblood")
+		maxblood.text = BloodEditWindow.get_node("maxbloodamount").text
+		$BloodEditWindow/Warning.visible = false
+		windowopened = false
+		BloodEditWindow.get_node("maxbloodamount").text = ""
+		BloodEditWindow.visible = false
+	
+	else:
+		$BloodEditWindow/Warning.visible = true
+		$BloodEditWindow/Warning.text = "Max blood must not be empty."
+
+
+func _on_b_cancel_pressed() -> void:
+	$BloodEditWindow/Warning.visible = false
+	windowopened = false
+	BloodEditWindow.get_node("maxbloodamount").text = ""
+	BloodEditWindow.visible = false
+
+func controlRateWindow(state):
+	
+	if not state:
+		windowopened = false
+		RateEditWindow.visible = false
+		$RateEditWindow/CustomBlock/Source.text = ""
+		$RateEditWindow/CustomBlock/rate.value = 0
+		$RateEditWindow/CustomBlock/Duration.text = ""
+		$RateEditWindow/CustomBlock/prefix.text = "Negative"
+		$RateEditWindow/Warning.visible = false
+		print(1)
+	
+	else:
+		windowopened = true
+		RateEditWindow.visible = true
+		$RateEditWindow/CustomBlock/Source.text = ""
+		$RateEditWindow/CustomBlock/rate.value = 0
+		$RateEditWindow/CustomBlock/Duration.text = ""
+		$RateEditWindow/CustomBlock/prefix.text = "Negative"
+		$RateEditWindow/Warning.visible = false
+		SourceList.clear()
+
+func UpdateSourcesList():
+	for i in CurTracker["Sources"]:
+		#print(i + ": " + str(CurTracker["Sources"][i][0]) + "(" + str(CurTracker["Sources"][i][1]) + ")")
+		SourceList.add_item(i + ": " + str(CurTracker["Sources"][i][0]) + "(" + str(CurTracker["Sources"][i][1]) + ")")
+
+func _on_edit_rate_pressed() -> void:
+	if windowopened: return
+	if current == null: return
+	
+	controlRateWindow(true)
+	UpdateSourcesList()
+
+
+func _on_prefix_pressed() -> void:
+	if $RateEditWindow/CustomBlock/prefix.text == "Negative":
+		$RateEditWindow/CustomBlock/prefix.text = "Positive"
+	else:
+		$RateEditWindow/CustomBlock/prefix.text = "Negative"
+
+func _on_add_pressed() -> void:
+	var cs = $RateEditWindow/CustomBlock/Source
+	var rate = $RateEditWindow/CustomBlock/rate
+	var duration = $RateEditWindow/CustomBlock/Duration
+	var warning = $RateEditWindow/Warning
+	var prefix = $RateEditWindow/CustomBlock/prefix
+	
+	if not CleanText(cs.text):
+		warning.text = "Source must be specified."
+		warning.visible = true
+		return
+	
+	if rate.value == 0:
+		warning.text = "Rate must not be 0."
+		warning.visible = true
+		return
+	
+	if not CleanText(duration.text) or not duration.text.is_valid_int():
+		warning.text = "Duration must be a valid int."
+		warning.visible = true
+		return
+	
+	warning.visible = false
+	
+	var newrate
+	if prefix.text == "Negative":
+		newrate = rate.value * -1
+	else:
+		newrate = rate.value
+	
+	TempDict[cs.text + ": " + str(newrate) + "(" + duration.text + ")"] = cs.text
+	CurTracker["Sources"][cs.text] = [newrate, int(duration.text)]
+	
+	UpdateSourcesList()
+	
+	cs.text = ""
+	rate.value = 0
+	duration.text = ""
+
+func calculateRate():
+	var base = 2
+	
+	for i in CurTracker["Sources"]:
+		base += CurTracker["Sources"][i][0]
+	
+	var rate = CellPools[current - 1].get_node("BloodPanel").get_node("rate")
+	
+	if base <= 0:
+		rate.text = str(base)
+	else:
+		rate.text = "+" + str(base)
+	
+	CurTracker["rate"] = base
+
+func _on_r_delete_pressed() -> void:
+	var chosenItem = SourceList.get_selected_items()
+	if chosenItem.size() > 0:
+		var indextoremove = chosenItem[0]
+		var key = TempDict[SourceList.get_item_text(indextoremove)]
+		
+		#loglist.add_item("Deleted blood rate " + key + " from " + editing.text)
+		
+		CurTracker["Sources"].erase(key)
+		TempDict.erase(SourceList.get_item_text(indextoremove))
+		
+		SourceList.remove_item(indextoremove)
+		
+	else:
+		print("Nothing selected")
+
+
+func _on_r_confirm_pressed() -> void:
+	controlRateWindow(false)
+	calculateRate()
