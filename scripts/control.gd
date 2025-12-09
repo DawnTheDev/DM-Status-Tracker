@@ -34,8 +34,12 @@ var CurTracker
 @onready var EffectsEditWindow = $EffectsEditWindow
 @onready var SourceList = $RateEditWindow/SourceList
 
+@onready var effectcs = $EffectsEditWindow/CustomBlock/Source
+@onready var effectduration = $EffectsEditWindow/CustomBlock/LineEdit
+
 var windowopened: bool
 var TempDict = {}
+var TempEffectDict = {}
 
 func _ready() -> void:
 	var cells = $ScrollContainer/HBoxContainer.get_children()
@@ -147,6 +151,7 @@ func _on_edit_blood_pressed() -> void:
 
 
 func _on_b_confirm_pressed() -> void:
+	if current == null: return
 	
 	if CleanText(BloodEditWindow.get_node("maxbloodamount").text):
 		
@@ -157,6 +162,11 @@ func _on_b_confirm_pressed() -> void:
 		
 		var maxblood = CellPools[current - 1].get_node("BloodPanel").get_node("maxblood")
 		maxblood.text = BloodEditWindow.get_node("maxbloodamount").text
+		#maxblood.label_settings.font_color = Color.GREEN
+		
+		CurTracker["maxblood"] = int(BloodEditWindow.get_node("maxbloodamount").text)
+		CurTracker["blood"] = CurTracker["maxblood"]
+		
 		$BloodEditWindow/Warning.visible = false
 		windowopened = false
 		BloodEditWindow.get_node("maxbloodamount").text = ""
@@ -288,3 +298,166 @@ func _on_r_delete_pressed() -> void:
 func _on_r_confirm_pressed() -> void:
 	controlRateWindow(false)
 	calculateRate()
+
+
+func _on_edit_effects_pressed() -> void:
+	if windowopened: return
+	if current == null: return
+	windowopened = true
+	EffectsEditWindow.visible = true
+	
+	effectcs.text = ""
+	effectduration.text = ""
+	UpdateEffectsList()
+
+func UpdateEffectsList():
+	$EffectsEditWindow/SourceList.clear()
+	for i in CurTracker["effects"]:
+		$EffectsEditWindow/SourceList.add_item(i + ": " + str(CurTracker["effects"][i]))
+
+func _on_eadd_pressed() -> void:
+	
+	if not CleanText(effectcs.text):
+		$EffectsEditWindow/Warning.text = "Source must be specified."
+		$EffectsEditWindow/Warning.visible = true
+		return
+	
+	if not CleanText(effectduration.text) or not effectduration.text.is_valid_int():
+		$EffectsEditWindow/Warning.text = "Duration must a a valid int."
+		$EffectsEditWindow/Warning.visible = true
+		return
+	
+	$EffectsEditWindow/Warning.visible = false
+	
+	TempEffectDict[effectcs.text + ": " + effectduration.text] = effectcs.text
+	CurTracker["effects"][effectcs.text] = int(effectduration.text)
+	UpdateEffectsList()
+	
+	effectcs.text = ""
+	effectduration.text = ""
+
+
+func _on_e_confirm_pressed() -> void:
+	var Effects = CellPools[current - 1].get_node("StatusNotes").get_node("Label")
+	
+	var curStr: String
+	for i in CurTracker["effects"]:
+		curStr += i + "(" + str(CurTracker["effects"][i]) + ") "
+	
+	Effects.text = curStr
+	
+	windowopened = false
+	EffectsEditWindow.visible = false
+	
+	effectcs.text = ""
+	effectduration.text = ""
+
+
+func _on_e_delete_pressed() -> void:
+	var chosenItem = $EffectsEditWindow/SourceList.get_selected_items()
+	if chosenItem.size() > 0:
+		var indextoremove = chosenItem[0]
+		var key = TempEffectDict[$EffectsEditWindow/SourceList.get_item_text(indextoremove)]
+		
+		#loglist.add_item("Deleted blood rate " + key + " from " + editing.text)
+		
+		CurTracker["effects"].erase(key)
+		TempEffectDict.erase($EffectsEditWindow/SourceList.get_item_text(indextoremove))
+		
+		$EffectsEditWindow/SourceList.remove_item(indextoremove)
+		
+	else:
+		print("Nothing selected")
+
+
+func _on_reset_blood_pressed() -> void:
+	if current == null: return
+	
+	CurTracker["blood"] = CurTracker["maxblood"]
+	
+	var blood = CellPools[current - 1].get_node("BloodPanel").get_node("blood")
+	blood.text = str(CurTracker["blood"]) + "(100%)"
+	blood.label_settings.font_color = Color.GREEN
+
+
+func _on_apply_rate_pressed() -> void:
+	if current == null: return
+	
+	var previousblood = CurTracker["blood"]
+	
+	CurTracker["blood"] += CurTracker["rate"]
+	
+	if CurTracker["blood"] > CurTracker["maxblood"]:
+		CurTracker["blood"] = CurTracker["maxblood"]
+	
+	if CurTracker["blood"] < 0.0:
+		CurTracker["blood"] = 0.0
+	
+	var blood = CellPools[current - 1].get_node("BloodPanel").get_node("blood")
+	
+	var factor = pow(10.0, 2)
+	var percentage = ceil((CurTracker["blood"] / CurTracker["maxblood"] * 100) * factor) / factor
+	
+	blood.text = str(CurTracker["blood"]) + "(" + str(percentage) + "%)"
+	
+	var startColor = Color.GREEN
+	var EndColor = Color.RED
+	
+	var normVal = (CurTracker["blood"] - 0.0) / (CurTracker["maxblood"] - 0.0)
+	var interpolatedColor = EndColor.lerp(startColor, normVal)
+	
+	blood.label_settings.font_color = interpolatedColor
+
+func UpdateAmmoDisplay():
+	
+	var AmmoPanel = CellPools[current - 1].get_node("AmmunitionPanel")
+	var CurAmmo = AmmoPanel.get_node("CurAmmo")
+	var Reserves = AmmoPanel.get_node("Reserves")
+	var Ms = AmmoPanel.get_node("MagSize")
+	
+	CurAmmo.text = str(CurTracker["ammo"])
+	Reserves.text = str(CurTracker["reverve"])
+	Ms.text = str(CurTracker["magazine"])
+	
+
+func _on_a_confirm_pressed() -> void:
+	var AmmoDrain = $AmmunitionWindow/AmmoDrain
+	var ReserveDrain = $AmmunitionWindow/ReserveDrain
+	var MagSize = $AmmunitionWindow/MagSize
+	var ReserveAmount = $AmmunitionWindow/ReserveAmount
+	
+	if AmmoDrain.value <= 0 or ReserveDrain.value <= 0 or MagSize.value <= 0 or ReserveAmount.value <= 0:
+		$AmmunitionWindow/Warning.visible = true
+		return
+	
+	$AmmunitionWindow/Warning.visible = false
+	
+	CurTracker["ammo"] = int(MagSize.value)
+	CurTracker["reverve"] = int(ReserveAmount.value)
+	CurTracker["magazine"] = int(MagSize.value)
+	CurTracker["ammodrain"] = int(AmmoDrain.value)
+	CurTracker["reservedrain"] = int(ReserveDrain.value)
+	
+	UpdateAmmoDisplay()
+	$AmmunitionWindow.visible = false
+	windowopened = false
+
+func _on_a_cancel_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_edit_ammo_pressed() -> void:
+	if windowopened or current == null: return
+	
+	windowopened = true
+	var AmmoDrain = $AmmunitionWindow/AmmoDrain
+	var ReserveDrain = $AmmunitionWindow/ReserveDrain
+	var MagSize = $AmmunitionWindow/MagSize
+	var ReserveAmount = $AmmunitionWindow/ReserveAmount
+	
+	AmmoDrain.value = 3
+	ReserveDrain.value = 1
+	MagSize.value = 30
+	ReserveAmount.value = 0
+	
+	$AmmunitionWindow.visible = true

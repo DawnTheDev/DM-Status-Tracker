@@ -1,10 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://dn3wwsufh6bc6"]
+[gd_scene load_steps=40 format=3 uid="uid://dn3wwsufh6bc6"]
 
 [ext_resource type="Script" uid="uid://2upccj2c7dsj" path="res://scripts/control.gd" id="1_cgmvo"]
 [ext_resource type="FontFile" uid="uid://narcup26e6qb" path="res://fonts/Anja Eliane.ttf" id="2_vh8u0"]
 [ext_resource type="StyleBox" uid="uid://dv8q3ryrsj553" path="res://Settings/DefaultStatCellPanel.tres" id="3_wpaqk"]
 [ext_resource type="LabelSettings" uid="uid://6swi33jdgd47" path="res://Settings/PlaceholderSetting.tres" id="4_btyrf"]
-[ext_resource type="StyleBox" uid="uid://3gl4g3eyeyii" path="res://Scenes/DefaultWindow.tres" id="5_btyrf"]
+[ext_resource type="StyleBox" uid="uid://3gl4g3eyeyii" path="res://Settings/DefaultWindow.tres" id="5_btyrf"]
 
 [sub_resource type="Gradient" id="Gradient_wpaqk"]
 interpolation_mode = 2
@@ -47,6 +47,10 @@ font = ExtResource("2_vh8u0")
 font_size = 15
 
 [sub_resource type="LabelSettings" id="LabelSettings_mft5f"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_6nikr"]
 font = ExtResource("2_vh8u0")
 font_size = 15
 
@@ -116,6 +120,21 @@ font_color = Color(1, 0, 0, 1)
 font = ExtResource("2_vh8u0")
 font_size = 20
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vphrd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gi5fq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s5sn0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m2exy"]
+font = ExtResource("2_vh8u0")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_ikxuy"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+font_color = Color(1, 0, 0, 1)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1tcje"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vxodi"]
@@ -125,22 +144,27 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -3.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cgmvo")
 
 [node name="bg" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 654.0
+offset_left = -62.0
+offset_top = -36.0
+offset_right = 1218.0
+offset_bottom = 684.0
 texture = SubResource("GradientTexture2D_btyrf")
 
 [node name="Title" type="Panel" parent="."]
+z_index = 1
 layout_mode = 0
-offset_left = 462.0
-offset_top = 18.0
-offset_right = 718.0
-offset_bottom = 58.0
+offset_left = 453.0
+offset_top = -18.0
+offset_right = 709.0
+offset_bottom = 22.0
 
 [node name="Label" type="Label" parent="Title"]
 layout_mode = 0
@@ -153,10 +177,10 @@ label_settings = SubResource("LabelSettings_dqysy")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 138.0
-offset_right = 1127.0
-offset_bottom = 627.0
+offset_left = -28.0
+offset_top = 172.0
+offset_right = 1186.0
+offset_bottom = 661.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_dqysy")
 vertical_scroll_mode = 0
 
@@ -219,12 +243,12 @@ vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell1/cell/BloodPanel"]
 layout_mode = 0
-offset_left = 165.0
+offset_left = 153.0
 offset_top = 63.0
-offset_right = 220.0
+offset_right = 236.0
 offset_bottom = 86.0
 text = "100"
-label_settings = ExtResource("4_btyrf")
+label_settings = SubResource("LabelSettings_6nikr")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -351,7 +375,7 @@ text = "180"
 label_settings = SubResource("LabelSettings_0yuog")
 vertical_alignment = 1
 
-[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell1/cell/AmmunitionPanel"]
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell1/cell/AmmunitionPanel"]
 layout_mode = 0
 offset_left = 159.0
 offset_top = 72.0
@@ -406,247 +430,6 @@ offset_bottom = 458.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
 toggle_mode = true
 metadata/id = 1
-
-[node name="TrackerCell2" type="Control" parent="ScrollContainer/HBoxContainer"]
-custom_minimum_size = Vector2(285, 0)
-layout_mode = 2
-
-[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell2"]
-layout_mode = 0
-offset_right = 285.0
-offset_bottom = 457.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
-
-[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell"]
-layout_mode = 0
-offset_left = 65.0
-offset_top = 11.0
-offset_right = 226.0
-offset_bottom = 42.0
-text = "Tracker"
-label_settings = SubResource("LabelSettings_vxodi")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-justification_flags = 162
-
-[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 58.0
-offset_right = 267.0
-offset_bottom = 169.0
-theme_override_styles/panel = ExtResource("3_wpaqk")
-
-[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel"]
-layout_mode = 0
-offset_left = 63.0
-offset_top = 41.0
-offset_right = 112.0
-offset_bottom = 62.0
-text = "+2"
-label_settings = SubResource("LabelSettings_fx7jt")
-vertical_alignment = 1
-
-[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel"]
-layout_mode = 0
-offset_left = 69.0
-offset_top = 63.0
-offset_right = 109.0
-offset_bottom = 86.0
-text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
-vertical_alignment = 1
-
-[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel"]
-layout_mode = 0
-offset_left = 165.0
-offset_top = 63.0
-offset_right = 220.0
-offset_bottom = 86.0
-text = "100"
-label_settings = ExtResource("4_btyrf")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel/Fixed"]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 39.0
-offset_right = 59.0
-offset_bottom = 62.0
-text = "Rate:"
-label_settings = ExtResource("4_btyrf")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel/Fixed"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 63.0
-offset_right = 66.0
-offset_bottom = 86.0
-text = "Blood:"
-label_settings = ExtResource("4_btyrf")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel/Fixed"]
-layout_mode = 0
-offset_left = 105.0
-offset_top = 9.0
-offset_right = 148.0
-offset_bottom = 32.0
-text = "Blood"
-label_settings = ExtResource("4_btyrf")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel/Fixed"]
-layout_mode = 0
-offset_left = 154.0
-offset_top = 39.0
-offset_right = 234.0
-offset_bottom = 62.0
-text = "Max Blood"
-label_settings = ExtResource("4_btyrf")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell"]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 179.0
-offset_right = 268.0
-offset_bottom = 309.0
-theme_override_styles/panel = ExtResource("3_wpaqk")
-
-[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel/Fixed"]
-layout_mode = 0
-offset_left = 75.0
-offset_top = 8.0
-offset_right = 172.0
-offset_bottom = 31.0
-text = "Ammunition"
-label_settings = ExtResource("4_btyrf")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel/Fixed"]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 42.0
-offset_right = 79.0
-offset_bottom = 65.0
-text = "Current: "
-label_settings = ExtResource("4_btyrf")
-vertical_alignment = 1
-
-[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel/Fixed"]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 75.0
-offset_right = 79.0
-offset_bottom = 98.0
-text = "Reserve:"
-label_settings = ExtResource("4_btyrf")
-vertical_alignment = 1
-
-[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel/Fixed"]
-layout_mode = 0
-offset_left = 126.0
-offset_top = 42.0
-offset_right = 236.0
-offset_bottom = 65.0
-text = "Magazine Size"
-label_settings = ExtResource("4_btyrf")
-vertical_alignment = 1
-
-[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel"]
-layout_mode = 0
-offset_left = 77.0
-offset_top = 43.0
-offset_right = 117.0
-offset_bottom = 66.0
-text = "30"
-label_settings = SubResource("LabelSettings_qtfct")
-vertical_alignment = 1
-
-[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel"]
-layout_mode = 0
-offset_left = 81.0
-offset_top = 76.0
-offset_right = 121.0
-offset_bottom = 99.0
-text = "180"
-label_settings = SubResource("LabelSettings_0yuog")
-vertical_alignment = 1
-
-[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel"]
-layout_mode = 0
-offset_left = 159.0
-offset_top = 72.0
-offset_right = 199.0
-offset_bottom = 95.0
-text = "30"
-label_settings = SubResource("LabelSettings_mwcvj")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell"]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 319.0
-offset_right = 268.0
-offset_bottom = 442.0
-theme_override_styles/panel = ExtResource("3_wpaqk")
-
-[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/StatusNotes"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/StatusNotes/Fixed"]
-layout_mode = 0
-offset_left = 96.0
-offset_top = 7.0
-offset_right = 146.0
-offset_bottom = 30.0
-text = "Effects"
-label_settings = ExtResource("4_btyrf")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/StatusNotes"]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 37.0
-offset_right = 235.0
-offset_bottom = 110.0
-text = "Bleed (3), Burn (10), Gunshot wound (10)"
-label_settings = SubResource("LabelSettings_wpaqk")
-autowrap_mode = 3
-autowrap_trim_flags = 0
-
-[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell2"]
-self_modulate = Color(1, 1, 1, 0)
-z_index = 1
-layout_mode = 0
-offset_right = 285.0
-offset_bottom = 458.0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
-toggle_mode = true
-metadata/id = 2
 
 [node name="TrackerEditWindow" type="Panel" parent="."]
 visible = false
@@ -925,7 +708,7 @@ theme_override_fonts/font = ExtResource("2_vh8u0")
 placeholder_text = "Source"
 alignment = 1
 
-[node name="add" type="Button" parent="EffectsEditWindow/CustomBlock"]
+[node name="eadd" type="Button" parent="EffectsEditWindow/CustomBlock"]
 layout_mode = 0
 offset_left = 491.0
 offset_top = -1.0
@@ -952,6 +735,7 @@ offset_right = 553.0
 offset_bottom = 337.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_styles/panel = SubResource("StyleBoxFlat_mft5f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vphrd")
 item_count = 3
 item_0/text = "1"
 item_1/text = "2"
@@ -965,6 +749,7 @@ offset_right = 553.0
 offset_bottom = 368.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gi5fq")
 text = "Confirm"
 
 [node name="EDelete" type="Button" parent="EffectsEditWindow"]
@@ -975,132 +760,365 @@ offset_right = 81.0
 offset_bottom = 368.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s5sn0")
 text = "Delete"
 
-[node name="EditBlood" type="Button" parent="."]
+[node name="Warning" type="Label" parent="EffectsEditWindow"]
+visible = false
 layout_mode = 0
-offset_left = 129.0
+offset_left = 192.0
+offset_top = 43.0
+offset_right = 437.0
+offset_bottom = 66.0
+text = "Source must be specified."
+label_settings = SubResource("LabelSettings_bbjms")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionWindow" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 333.0
+offset_top = 190.0
+offset_right = 816.0
+offset_bottom = 448.0
+theme_override_styles/panel = ExtResource("5_btyrf")
+
+[node name="Fixed" type="Control" parent="AmmunitionWindow"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="AmmunitionWindow/Fixed"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 21.0
+offset_right = 321.0
+offset_bottom = 44.0
+text = "Ammunition Edit"
+label_settings = SubResource("LabelSettings_m2exy")
+
+[node name="Label2" type="Label" parent="AmmunitionWindow/Fixed"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 70.0
+offset_right = 154.0
+offset_bottom = 93.0
+text = "Ammo drain rate"
+label_settings = ExtResource("4_btyrf")
+
+[node name="Label3" type="Label" parent="AmmunitionWindow/Fixed"]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 71.0
+offset_right = 325.0
+offset_bottom = 94.0
+text = "Reserve drain rate"
+label_settings = ExtResource("4_btyrf")
+
+[node name="Label5" type="Label" parent="AmmunitionWindow/Fixed"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 149.0
+offset_right = 327.0
+offset_bottom = 172.0
+text = "Reserve amount"
+label_settings = ExtResource("4_btyrf")
+
+[node name="Label4" type="Label" parent="AmmunitionWindow/Fixed"]
+layout_mode = 0
+offset_left = 351.0
 offset_top = 69.0
-offset_right = 217.0
-offset_bottom = 96.0
+offset_right = 459.0
+offset_bottom = 92.0
+text = "Magazine size"
+label_settings = ExtResource("4_btyrf")
+
+[node name="AmmoDrain" type="SpinBox" parent="AmmunitionWindow"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 100.0
+offset_right = 138.5625
+offset_bottom = 131.0
+value = 3.0
+rounded = true
+alignment = 1
+
+[node name="ReserveDrain" type="SpinBox" parent="AmmunitionWindow"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 100.0
+offset_right = 302.5625
+offset_bottom = 131.0
+value = 1.0
+rounded = true
+alignment = 1
+
+[node name="MagSize" type="SpinBox" parent="AmmunitionWindow"]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 100.0
+offset_right = 450.5625
+offset_bottom = 131.0
+value = 30.0
+rounded = true
+alignment = 1
+
+[node name="ReserveAmount" type="SpinBox" parent="AmmunitionWindow"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 179.0
+offset_right = 294.5625
+offset_bottom = 210.0
+max_value = 999.0
+rounded = true
+alignment = 1
+
+[node name="AConfirm" type="Button" parent="AmmunitionWindow"]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 223.0
+offset_right = 465.0
+offset_bottom = 248.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gi5fq")
+text = "Confirm"
+
+[node name="ACancel" type="Button" parent="AmmunitionWindow"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 223.0
+offset_right = 83.0
+offset_bottom = 248.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gi5fq")
+text = "Cancel"
+
+[node name="Warning" type="Label" parent="AmmunitionWindow"]
+visible = false
+layout_mode = 0
+offset_left = 100.0
+offset_top = 49.0
+offset_right = 394.0
+offset_bottom = 72.0
+text = "Values must not be lower or equal to 0."
+label_settings = SubResource("LabelSettings_ikxuy")
+
+[node name="BloodStuff" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 44.0
+offset_right = 229.0
+offset_bottom = 152.0
+theme_override_styles/panel = ExtResource("5_btyrf")
+
+[node name="EditBlood" type="Button" parent="BloodStuff"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 33.0
+offset_right = 109.0
+offset_bottom = 60.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
 theme_override_styles/focus = SubResource("StyleBoxEmpty_1tcje")
 text = "Edit Blood"
 
-[node name="EditRate" type="Button" parent="."]
+[node name="ApplyRate" type="Button" parent="BloodStuff"]
 layout_mode = 0
-offset_left = 222.0
-offset_top = 70.0
-offset_right = 301.0
-offset_bottom = 97.0
+offset_left = 120.0
+offset_top = 67.0
+offset_right = 208.0
+offset_bottom = 92.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_font_sizes/font_size = 15
+text = "Apply Rate"
+
+[node name="ResetBlood" type="Button" parent="BloodStuff"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 68.0
+offset_right = 113.0
+offset_bottom = 93.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_font_sizes/font_size = 15
+text = "Reset Blood"
+
+[node name="EditRate" type="Button" parent="BloodStuff"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 34.0
+offset_right = 202.0
+offset_bottom = 61.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
 theme_override_styles/focus = SubResource("StyleBoxEmpty_1tcje")
 text = "Edit Rate"
 
-[node name="EditName" type="Button" parent="."]
+[node name="Label" type="Label" parent="BloodStuff"]
 layout_mode = 0
-offset_left = 34.0
-offset_top = 70.0
-offset_right = 118.0
-offset_bottom = 95.0
+offset_left = 91.0
+offset_top = 6.0
+offset_right = 134.0
+offset_bottom = 29.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmoPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 42.0
+offset_right = 541.0
+offset_bottom = 150.0
+theme_override_styles/panel = ExtResource("5_btyrf")
+
+[node name="EditAmmo" type="Button" parent="AmmoPanel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 37.0
+offset_right = 109.0
+offset_bottom = 62.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vxodi")
-text = "Edit Name"
+text = "Edit Ammo"
 
-[node name="EditAmmo" type="Button" parent="."]
+[node name="Reload" type="Button" parent="AmmoPanel"]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 102.0
-offset_right = 258.0
-offset_bottom = 127.0
+offset_left = 115.0
+offset_top = 40.0
+offset_right = 203.0
+offset_bottom = 65.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vxodi")
-text = "Edit Ammunition"
+text = "Reload"
 
-[node name="EditEffects" type="Button" parent="."]
+[node name="ApplyAmmo" type="Button" parent="AmmoPanel"]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 103.0
-offset_right = 121.0
-offset_bottom = 128.0
+offset_left = 115.0
+offset_top = 64.0
+offset_right = 216.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_font_sizes/font_size = 15
+text = "Apply Ammo"
+
+[node name="ResetAmmo" type="Button" parent="AmmoPanel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 63.0
+offset_right = 111.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_font_sizes/font_size = 15
+text = "Reset Ammo"
+
+[node name="Label" type="Label" parent="AmmoPanel"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 10.0
+offset_right = 154.0
+offset_bottom = 33.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+
+[node name="EffectPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 41.0
+offset_right = 861.0
+offset_bottom = 150.0
+theme_override_styles/panel = ExtResource("5_btyrf")
+
+[node name="EditEffects" type="Button" parent="EffectPanel"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 41.0
+offset_right = 159.0
+offset_bottom = 66.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vxodi")
 text = "Edit Effects"
 
-[node name="ApplyRate" type="Button" parent="."]
+[node name="ApplyEffect" type="Button" parent="EffectPanel"]
 layout_mode = 0
-offset_left = 894.0
-offset_top = 74.0
-offset_right = 982.0
-offset_bottom = 99.0
-theme_override_fonts/font = ExtResource("2_vh8u0")
-theme_override_font_sizes/font_size = 15
-text = "Apply Rate"
-
-[node name="ApplyAmmo" type="Button" parent="."]
-layout_mode = 0
-offset_left = 874.0
-offset_top = 105.0
-offset_right = 1017.0
-offset_bottom = 130.0
-theme_override_fonts/font = ExtResource("2_vh8u0")
-theme_override_font_sizes/font_size = 15
-text = "Apply Ammunition"
-
-[node name="ApplyEffect" type="Button" parent="."]
-layout_mode = 0
-offset_left = 993.0
-offset_top = 74.0
-offset_right = 1089.0
-offset_bottom = 99.0
+offset_left = 116.0
+offset_top = 72.0
+offset_right = 212.0
+offset_bottom = 97.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
 text = "Apply Effect"
 
-[node name="ResetBlood" type="Button" parent="."]
+[node name="ResetEffects" type="Button" parent="EffectPanel"]
 layout_mode = 0
-offset_left = 490.0
-offset_top = 76.0
-offset_right = 587.0
-offset_bottom = 101.0
-theme_override_fonts/font = ExtResource("2_vh8u0")
-theme_override_font_sizes/font_size = 15
-text = "Reset Blood"
-
-[node name="ResetAmmo" type="Button" parent="."]
-layout_mode = 0
-offset_left = 518.0
-offset_top = 106.0
-offset_right = 662.0
-offset_bottom = 131.0
-theme_override_fonts/font = ExtResource("2_vh8u0")
-theme_override_font_sizes/font_size = 15
-text = "Reset Ammunition"
-
-[node name="ResetEffects" type="Button" parent="."]
-layout_mode = 0
-offset_left = 594.0
-offset_top = 77.0
-offset_right = 698.0
-offset_bottom = 102.0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 112.0
+offset_bottom = 97.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
 text = "Reset Effects"
 
-[node name="TurnStep" type="Button" parent="."]
+[node name="Label" type="Label" parent="EffectPanel"]
 layout_mode = 0
-offset_left = 1022.0
-offset_top = 105.0
-offset_right = 1115.0
-offset_bottom = 130.0
+offset_left = 64.0
+offset_top = 8.0
+offset_right = 154.0
+offset_bottom = 31.0
+text = "Effect"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MiscPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 938.0
+offset_top = 43.0
+offset_right = 1155.0
+offset_bottom = 152.0
+theme_override_styles/panel = ExtResource("5_btyrf")
+
+[node name="Label" type="Label" parent="MiscPanel"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 11.0
+offset_right = 163.0
+offset_bottom = 34.0
+text = "Miscellaneous"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TurnStep" type="Button" parent="MiscPanel"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 57.0
+offset_right = 204.0
+offset_bottom = 82.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
 text = "Step 1 Turn"
+
+[node name="EditName" type="Button" parent="MiscPanel"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 57.0
+offset_right = 102.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vxodi")
+text = "Edit Name"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 324)
+zoom = Vector2(0.9, 0.9)
 
 [connection signal="pressed" from="TrackerEditWindow/TConfirm" to="." method="_on_t_confirm_pressed"]
 [connection signal="pressed" from="TrackerEditWindow/TCancel" to="." method="_on_t_cancel_pressed"]
@@ -1110,6 +1128,15 @@ text = "Step 1 Turn"
 [connection signal="pressed" from="RateEditWindow/CustomBlock/add" to="." method="_on_add_pressed"]
 [connection signal="pressed" from="RateEditWindow/RConfirm" to="." method="_on_r_confirm_pressed"]
 [connection signal="pressed" from="RateEditWindow/RDelete" to="." method="_on_r_delete_pressed"]
-[connection signal="pressed" from="EditBlood" to="." method="_on_edit_blood_pressed"]
-[connection signal="pressed" from="EditRate" to="." method="_on_edit_rate_pressed"]
-[connection signal="pressed" from="EditName" to="." method="_on_edit_name_pressed"]
+[connection signal="pressed" from="EffectsEditWindow/CustomBlock/eadd" to="." method="_on_eadd_pressed"]
+[connection signal="pressed" from="EffectsEditWindow/EConfirm" to="." method="_on_e_confirm_pressed"]
+[connection signal="pressed" from="EffectsEditWindow/EDelete" to="." method="_on_e_delete_pressed"]
+[connection signal="pressed" from="AmmunitionWindow/AConfirm" to="." method="_on_a_confirm_pressed"]
+[connection signal="pressed" from="AmmunitionWindow/ACancel" to="." method="_on_a_cancel_pressed"]
+[connection signal="pressed" from="BloodStuff/EditBlood" to="." method="_on_edit_blood_pressed"]
+[connection signal="pressed" from="BloodStuff/ApplyRate" to="." method="_on_apply_rate_pressed"]
+[connection signal="pressed" from="BloodStuff/ResetBlood" to="." method="_on_reset_blood_pressed"]
+[connection signal="pressed" from="BloodStuff/EditRate" to="." method="_on_edit_rate_pressed"]
+[connection signal="pressed" from="AmmoPanel/EditAmmo" to="." method="_on_edit_ammo_pressed"]
+[connection signal="pressed" from="EffectPanel/EditEffects" to="." method="_on_edit_effects_pressed"]
+[connection signal="pressed" from="MiscPanel/EditName" to="." method="_on_edit_name_pressed"]

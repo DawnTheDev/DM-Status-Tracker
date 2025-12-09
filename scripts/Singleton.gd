@@ -7,7 +7,10 @@ var Tracker1 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker2 = {
@@ -17,7 +20,10 @@ var Tracker2 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker3 = {
@@ -27,7 +33,10 @@ var Tracker3 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker4 = {
@@ -37,7 +46,10 @@ var Tracker4 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker5 = {
@@ -47,7 +59,10 @@ var Tracker5 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker6 = {
@@ -57,7 +72,10 @@ var Tracker6 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker7 = {
@@ -67,7 +85,10 @@ var Tracker7 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker8 = {
@@ -77,7 +98,10 @@ var Tracker8 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker9 = {
@@ -87,7 +111,10 @@ var Tracker9 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker10 = {
@@ -97,7 +124,10 @@ var Tracker10 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker11 = {
@@ -107,7 +137,10 @@ var Tracker11 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker12 = {
@@ -117,7 +150,10 @@ var Tracker12 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker13 = {
@@ -127,7 +163,10 @@ var Tracker13 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker14 = {
@@ -137,7 +176,10 @@ var Tracker14 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
 
 var Tracker15 = {
@@ -147,5 +189,8 @@ var Tracker15 = {
 	"maxblood" = 100,
 	"ammo" = 0,
 	"reserve" = 0,
-	"effects" = ""
+	"effects" = {},
+	"magazine" = 30,
+	"ammodrain" = 0,
+	"reservedrain" = 0
 }
