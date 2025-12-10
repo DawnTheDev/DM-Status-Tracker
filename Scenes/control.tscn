@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dn3wwsufh6bc6"]
+[gd_scene load_steps=54 format=3 uid="uid://dn3wwsufh6bc6"]
 
 [ext_resource type="Script" uid="uid://2upccj2c7dsj" path="res://scripts/control.gd" id="1_cgmvo"]
 [ext_resource type="FontFile" uid="uid://narcup26e6qb" path="res://fonts/Anja Eliane.ttf" id="2_vh8u0"]
@@ -137,7 +137,51 @@ font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1tcje"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ikxuy"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vxodi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bbjms"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6nikr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n3b1b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_it1eu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n3b1b"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_b65us"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b65us"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d6tv3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m2exy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3hibd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d0l5l"]
+font = ExtResource("2_vh8u0")
+font_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4x83"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.08235294, 0.08235294, 0.08235294, 0.3372549)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v0v5g"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -223,9 +267,9 @@ theme_override_styles/panel = ExtResource("3_wpaqk")
 
 [node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell1/cell/BloodPanel"]
 layout_mode = 0
-offset_left = 63.0
+offset_left = 52.0
 offset_top = 41.0
-offset_right = 112.0
+offset_right = 101.0
 offset_bottom = 62.0
 text = "+2"
 label_settings = SubResource("LabelSettings_fx7jt")
@@ -233,9 +277,9 @@ vertical_alignment = 1
 
 [node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell1/cell/BloodPanel"]
 layout_mode = 0
-offset_left = 69.0
+offset_left = 58.0
 offset_top = 63.0
-offset_right = 109.0
+offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
 label_settings = SubResource("LabelSettings_mft5f")
@@ -243,10 +287,10 @@ vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell1/cell/BloodPanel"]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 63.0
-offset_right = 236.0
-offset_bottom = 86.0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
 text = "100"
 label_settings = SubResource("LabelSettings_6nikr")
 horizontal_alignment = 1
@@ -259,9 +303,9 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell1/cell/BloodPanel/Fixed"]
 layout_mode = 0
-offset_left = 19.0
+offset_left = 8.0
 offset_top = 39.0
-offset_right = 59.0
+offset_right = 48.0
 offset_bottom = 62.0
 text = "Rate:"
 label_settings = ExtResource("4_btyrf")
@@ -270,9 +314,9 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell1/cell/BloodPanel/Fixed"]
 layout_mode = 0
-offset_left = 18.0
+offset_left = 7.0
 offset_top = 63.0
-offset_right = 66.0
+offset_right = 55.0
 offset_bottom = 86.0
 text = "Blood:"
 label_settings = ExtResource("4_btyrf")
@@ -292,10 +336,10 @@ vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell1/cell/BloodPanel/Fixed"]
 layout_mode = 0
-offset_left = 154.0
-offset_top = 39.0
-offset_right = 234.0
-offset_bottom = 62.0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
 text = "Max Blood"
 label_settings = ExtResource("4_btyrf")
 horizontal_alignment = 1
@@ -430,6 +474,3380 @@ offset_bottom = 458.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
 toggle_mode = true
 metadata/id = 1
+
+[node name="TrackerCell2" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell2"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell2"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 2
+
+[node name="TrackerCell3" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell3"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell3"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 3
+
+[node name="TrackerCell4" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell4"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell4"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 4
+
+[node name="TrackerCell5" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell5"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell5"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 5
+
+[node name="TrackerCell6" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell6"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell6"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 6
+
+[node name="TrackerCell7" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell7"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell7"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 7
+
+[node name="TrackerCell8" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell8"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell8"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 8
+
+[node name="TrackerCell9" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell9"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell9"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 9
+
+[node name="TrackerCell10" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell10"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell10"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 10
+
+[node name="TrackerCell11" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell11"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell11"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 11
+
+[node name="TrackerCell12" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell12"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell12"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 12
+
+[node name="TrackerCell13" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell13"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell13"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 13
+
+[node name="TrackerCell14" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell14"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell14"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 14
+
+[node name="TrackerCell15" type="Control" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+
+[node name="cell" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell15"]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 457.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tcje")
+
+[node name="Name" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 226.0
+offset_bottom = 42.0
+text = "Tracker"
+label_settings = SubResource("LabelSettings_vxodi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+justification_flags = 162
+
+[node name="BloodPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 267.0
+offset_bottom = 169.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="rate" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.0
+offset_right = 101.0
+offset_bottom = 62.0
+text = "+2"
+label_settings = SubResource("LabelSettings_fx7jt")
+vertical_alignment = 1
+
+[node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 63.0
+offset_right = 98.0
+offset_bottom = 86.0
+text = "100"
+label_settings = SubResource("LabelSettings_mft5f")
+vertical_alignment = 1
+
+[node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/BloodPanel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 85.0
+text = "100"
+label_settings = SubResource("LabelSettings_6nikr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/BloodPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 48.0
+offset_bottom = 62.0
+text = "Rate:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 55.0
+offset_bottom = 86.0
+text = "Blood:"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 9.0
+offset_right = 148.0
+offset_bottom = 32.0
+text = "Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/BloodPanel/Fixed"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 38.0
+offset_right = 242.0
+offset_bottom = 61.0
+text = "Max Blood"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmmunitionPanel" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 179.0
+offset_right = 268.0
+offset_bottom = 309.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/AmmunitionPanel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 8.0
+offset_right = 172.0
+offset_bottom = 31.0
+text = "Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 79.0
+offset_bottom = 65.0
+text = "Current: "
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 75.0
+offset_right = 79.0
+offset_bottom = 98.0
+text = "Reserve:"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/AmmunitionPanel/Fixed"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 42.0
+offset_right = 236.0
+offset_bottom = 65.0
+text = "Magazine Size"
+label_settings = ExtResource("4_btyrf")
+vertical_alignment = 1
+
+[node name="CurAmmo" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 43.0
+offset_right = 117.0
+offset_bottom = 66.0
+text = "30"
+label_settings = SubResource("LabelSettings_qtfct")
+vertical_alignment = 1
+
+[node name="Reserves" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 76.0
+offset_right = 121.0
+offset_bottom = 99.0
+text = "180"
+label_settings = SubResource("LabelSettings_0yuog")
+vertical_alignment = 1
+
+[node name="MagSize" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/AmmunitionPanel"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 72.0
+offset_right = 199.0
+offset_bottom = 95.0
+text = "30"
+label_settings = SubResource("LabelSettings_mwcvj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusNotes" type="Panel" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 319.0
+offset_right = 268.0
+offset_bottom = 442.0
+theme_override_styles/panel = ExtResource("3_wpaqk")
+
+[node name="Fixed" type="Control" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/StatusNotes"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/StatusNotes/Fixed"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 30.0
+text = "Effects"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/StatusNotes"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 37.0
+offset_right = 235.0
+offset_bottom = 110.0
+text = "Bleed (3), Burn (10), Gunshot wound (10)"
+label_settings = SubResource("LabelSettings_wpaqk")
+autowrap_mode = 3
+autowrap_trim_flags = 0
+
+[node name="Cell" type="Button" parent="ScrollContainer/HBoxContainer/TrackerCell15"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 458.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btyrf")
+toggle_mode = true
+metadata/id = 15
 
 [node name="TrackerEditWindow" type="Panel" parent="."]
 visible = false
@@ -933,6 +4351,7 @@ offset_right = 208.0
 offset_bottom = 92.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ikxuy")
 text = "Apply Rate"
 
 [node name="ResetBlood" type="Button" parent="BloodStuff"]
@@ -943,6 +4362,7 @@ offset_right = 113.0
 offset_bottom = 93.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ikxuy")
 text = "Reset Blood"
 
 [node name="EditRate" type="Button" parent="BloodStuff"]
@@ -977,10 +4397,10 @@ theme_override_styles/panel = ExtResource("5_btyrf")
 
 [node name="EditAmmo" type="Button" parent="AmmoPanel"]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 37.0
-offset_right = 109.0
-offset_bottom = 62.0
+offset_left = 17.0
+offset_top = 38.0
+offset_right = 105.0
+offset_bottom = 63.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vxodi")
@@ -988,10 +4408,10 @@ text = "Edit Ammo"
 
 [node name="Reload" type="Button" parent="AmmoPanel"]
 layout_mode = 0
-offset_left = 115.0
-offset_top = 40.0
-offset_right = 203.0
-offset_bottom = 65.0
+offset_left = 119.0
+offset_top = 37.0
+offset_right = 207.0
+offset_bottom = 62.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vxodi")
@@ -1000,21 +4420,23 @@ text = "Reload"
 [node name="ApplyAmmo" type="Button" parent="AmmoPanel"]
 layout_mode = 0
 offset_left = 115.0
-offset_top = 64.0
+offset_top = 69.0
 offset_right = 216.0
-offset_bottom = 89.0
+offset_bottom = 94.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bbjms")
 text = "Apply Ammo"
 
 [node name="ResetAmmo" type="Button" parent="AmmoPanel"]
 layout_mode = 0
 offset_left = 9.0
-offset_top = 63.0
+offset_top = 69.0
 offset_right = 111.0
-offset_bottom = 88.0
+offset_bottom = 94.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6nikr")
 text = "Reset Ammo"
 
 [node name="Label" type="Label" parent="AmmoPanel"]
@@ -1053,9 +4475,10 @@ offset_right = 212.0
 offset_bottom = 97.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n3b1b")
 text = "Apply Effect"
 
-[node name="ResetEffects" type="Button" parent="EffectPanel"]
+[node name="ClearEffects" type="Button" parent="EffectPanel"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 72.0
@@ -1063,7 +4486,8 @@ offset_right = 112.0
 offset_bottom = 97.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
-text = "Reset Effects"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n3b1b")
+text = "Clear Effects"
 
 [node name="Label" type="Label" parent="EffectPanel"]
 layout_mode = 0
@@ -1103,6 +4527,7 @@ offset_right = 204.0
 offset_bottom = 82.0
 theme_override_fonts/font = ExtResource("2_vh8u0")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_it1eu")
 text = "Step 1 Turn"
 
 [node name="EditName" type="Button" parent="MiscPanel"]
@@ -1119,6 +4544,229 @@ text = "Edit Name"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 324)
 zoom = Vector2(0.9, 0.9)
+
+[node name="AmmoOption" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 424.0
+offset_top = 197.0
+offset_right = 740.0
+offset_bottom = 414.0
+theme_override_styles/panel = ExtResource("5_btyrf")
+
+[node name="ApplyLayout" type="Control" parent="AmmoOption"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="AmmoOption/ApplyLayout"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 12.0
+offset_right = 241.0
+offset_bottom = 35.0
+text = "Apply Option"
+label_settings = SubResource("LabelSettings_n3b1b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Warning" type="Label" parent="AmmoOption/ApplyLayout"]
+visible = false
+layout_mode = 0
+offset_left = 45.0
+offset_top = 160.0
+offset_right = 272.0
+offset_bottom = 183.0
+text = "Values must not be 0 or lower."
+label_settings = SubResource("LabelSettings_b65us")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RateApplyLayout" type="Control" parent="AmmoOption/ApplyLayout"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label2" type="Label" parent="AmmoOption/ApplyLayout/RateApplyLayout"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 69.0
+offset_right = 177.0
+offset_bottom = 92.0
+text = "Current Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="AmmoOption/ApplyLayout/RateApplyLayout"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 124.0
+offset_right = 176.0
+offset_bottom = 147.0
+text = "Current Reserves"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ammo" type="SpinBox" parent="AmmoOption/ApplyLayout/RateApplyLayout"]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 65.0
+offset_right = 280.5625
+offset_bottom = 96.0
+rounded = true
+allow_greater = true
+alignment = 1
+
+[node name="Reserve" type="SpinBox" parent="AmmoOption/ApplyLayout/RateApplyLayout"]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 119.0
+offset_right = 280.5625
+offset_bottom = 150.0
+rounded = true
+allow_greater = true
+alignment = 1
+
+[node name="ManualApplyLayout" type="Control" parent="AmmoOption/ApplyLayout"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ammoPrefix" type="Button" parent="AmmoOption/ApplyLayout/ManualApplyLayout"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 66.0
+offset_right = 144.0
+offset_bottom = 93.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b65us")
+text = "Negative"
+
+[node name="reservePrefix" type="Button" parent="AmmoOption/ApplyLayout/ManualApplyLayout"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 131.0
+offset_right = 145.0
+offset_bottom = 158.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b65us")
+text = "Negative"
+
+[node name="Ammo" type="SpinBox" parent="AmmoOption/ApplyLayout/ManualApplyLayout"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 64.0
+offset_right = 257.5625
+offset_bottom = 95.0
+rounded = true
+allow_greater = true
+alignment = 1
+
+[node name="Reserve" type="SpinBox" parent="AmmoOption/ApplyLayout/ManualApplyLayout"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 129.0
+offset_right = 257.5625
+offset_bottom = 160.0
+rounded = true
+allow_greater = true
+alignment = 1
+
+[node name="Label" type="Label" parent="AmmoOption/ApplyLayout/ManualApplyLayout"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 41.0
+offset_right = 235.0
+offset_bottom = 64.0
+text = "Current Ammunition"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="AmmoOption/ApplyLayout/ManualApplyLayout"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 106.0
+offset_right = 235.0
+offset_bottom = 129.0
+text = "Current Reserves"
+label_settings = ExtResource("4_btyrf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Switch" type="Button" parent="AmmoOption/ApplyLayout"]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 7.0
+offset_right = 305.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d6tv3")
+text = "Switch"
+
+[node name="Cancel" type="Button" parent="AmmoOption/ApplyLayout"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 180.0
+offset_right = 76.0
+offset_bottom = 211.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m2exy")
+text = "Cancel"
+
+[node name="Confirm" type="Button" parent="AmmoOption/ApplyLayout"]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 180.0
+offset_right = 303.0
+offset_bottom = 211.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m2exy")
+text = "Confirm"
+
+[node name="Logs" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1111.0
+offset_top = -16.0
+offset_right = 1188.0
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3hibd")
+text = "Logs"
+
+[node name="LogsWindow" type="Panel" parent="."]
+visible = false
+z_index = 5
+layout_mode = 0
+offset_left = 236.0
+offset_top = 35.0
+offset_right = 920.0
+offset_bottom = 624.0
+theme_override_styles/panel = ExtResource("5_btyrf")
+
+[node name="Label" type="Label" parent="LogsWindow"]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 20.0
+offset_right = 410.0
+offset_bottom = 48.0
+text = "Action Logs"
+label_settings = SubResource("LabelSettings_d0l5l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LogsList" type="ItemList" parent="LogsWindow"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 91.0
+offset_right = 661.0
+offset_bottom = 571.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4x83")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v0v5g")
 
 [connection signal="pressed" from="TrackerEditWindow/TConfirm" to="." method="_on_t_confirm_pressed"]
 [connection signal="pressed" from="TrackerEditWindow/TCancel" to="." method="_on_t_cancel_pressed"]
@@ -1138,5 +4786,17 @@ zoom = Vector2(0.9, 0.9)
 [connection signal="pressed" from="BloodStuff/ResetBlood" to="." method="_on_reset_blood_pressed"]
 [connection signal="pressed" from="BloodStuff/EditRate" to="." method="_on_edit_rate_pressed"]
 [connection signal="pressed" from="AmmoPanel/EditAmmo" to="." method="_on_edit_ammo_pressed"]
+[connection signal="pressed" from="AmmoPanel/Reload" to="." method="_on_reload_pressed"]
+[connection signal="pressed" from="AmmoPanel/ApplyAmmo" to="." method="_on_apply_ammo_pressed"]
+[connection signal="pressed" from="AmmoPanel/ResetAmmo" to="." method="_on_reset_ammo_pressed"]
 [connection signal="pressed" from="EffectPanel/EditEffects" to="." method="_on_edit_effects_pressed"]
+[connection signal="pressed" from="EffectPanel/ApplyEffect" to="." method="_on_apply_effect_pressed"]
+[connection signal="pressed" from="EffectPanel/ClearEffects" to="." method="_on_clear_effects_pressed"]
+[connection signal="pressed" from="MiscPanel/TurnStep" to="." method="_on_turn_step_pressed"]
 [connection signal="pressed" from="MiscPanel/EditName" to="." method="_on_edit_name_pressed"]
+[connection signal="pressed" from="AmmoOption/ApplyLayout/ManualApplyLayout/ammoPrefix" to="." method="_on_ammo_prefix_pressed"]
+[connection signal="pressed" from="AmmoOption/ApplyLayout/ManualApplyLayout/reservePrefix" to="." method="_on_reserve_prefix_pressed"]
+[connection signal="pressed" from="AmmoOption/ApplyLayout/Switch" to="." method="_on_switch_pressed"]
+[connection signal="pressed" from="AmmoOption/ApplyLayout/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="AmmoOption/ApplyLayout/Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="Logs" to="." method="_on_logs_pressed"]
