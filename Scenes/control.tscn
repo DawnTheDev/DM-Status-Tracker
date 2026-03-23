@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://dn3wwsufh6bc6"]
+[gd_scene load_steps=70 format=3 uid="uid://dn3wwsufh6bc6"]
 
 [ext_resource type="Script" uid="uid://2upccj2c7dsj" path="res://scripts/control.gd" id="1_cgmvo"]
 [ext_resource type="FontFile" uid="uid://narcup26e6qb" path="res://fonts/Anja Eliane.ttf" id="2_vh8u0"]
@@ -42,11 +42,11 @@ corner_radius_bottom_left = 15
 font = ExtResource("2_vh8u0")
 font_size = 20
 
-[sub_resource type="LabelSettings" id="LabelSettings_fx7jt"]
+[sub_resource type="LabelSettings" id="LabelSettings_d6tv3"]
 font = ExtResource("2_vh8u0")
 font_size = 15
 
-[sub_resource type="LabelSettings" id="LabelSettings_mft5f"]
+[sub_resource type="LabelSettings" id="LabelSettings_v4x83"]
 font = ExtResource("2_vh8u0")
 font_size = 15
 
@@ -70,6 +70,70 @@ font = ExtResource("2_vh8u0")
 font_size = 15
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_btyrf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_it1eu"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_mft5f"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_fx7jt"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_3hibd"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_v0v5g"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1hj1"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_plhlc"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_q1sl5"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ommg"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_8wnrn"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_p8uc1"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_83phy"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_uuio0"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_xxscv"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_7cj2s"]
+font = ExtResource("2_vh8u0")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_ds2bm"]
+font = ExtResource("2_vh8u0")
+font_size = 15
 
 [sub_resource type="LabelSettings" id="LabelSettings_1tcje"]
 font = ExtResource("2_vh8u0")
@@ -272,7 +336,7 @@ offset_top = 41.0
 offset_right = 101.0
 offset_bottom = 62.0
 text = "+2"
-label_settings = SubResource("LabelSettings_fx7jt")
+label_settings = SubResource("LabelSettings_d6tv3")
 vertical_alignment = 1
 
 [node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell1/cell/BloodPanel"]
@@ -282,7 +346,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_v4x83")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell1/cell/BloodPanel"]
@@ -513,7 +577,7 @@ offset_top = 41.0
 offset_right = 101.0
 offset_bottom = 62.0
 text = "+2"
-label_settings = SubResource("LabelSettings_fx7jt")
+label_settings = SubResource("LabelSettings_it1eu")
 vertical_alignment = 1
 
 [node name="blood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell2/cell/BloodPanel"]
@@ -764,7 +828,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_3hibd")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell3/cell/BloodPanel"]
@@ -1005,7 +1069,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_v0v5g")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell4/cell/BloodPanel"]
@@ -1246,7 +1310,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_u1hj1")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell5/cell/BloodPanel"]
@@ -1487,7 +1551,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_plhlc")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell6/cell/BloodPanel"]
@@ -1728,7 +1792,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_q1sl5")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell7/cell/BloodPanel"]
@@ -1969,7 +2033,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_4ommg")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell8/cell/BloodPanel"]
@@ -2210,7 +2274,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_8wnrn")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell9/cell/BloodPanel"]
@@ -2451,7 +2515,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_p8uc1")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell10/cell/BloodPanel"]
@@ -2692,7 +2756,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_83phy")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell11/cell/BloodPanel"]
@@ -2933,7 +2997,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_uuio0")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell12/cell/BloodPanel"]
@@ -3174,7 +3238,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_xxscv")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell13/cell/BloodPanel"]
@@ -3415,7 +3479,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_7cj2s")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell14/cell/BloodPanel"]
@@ -3656,7 +3720,7 @@ offset_top = 63.0
 offset_right = 98.0
 offset_bottom = 86.0
 text = "100"
-label_settings = SubResource("LabelSettings_mft5f")
+label_settings = SubResource("LabelSettings_ds2bm")
 vertical_alignment = 1
 
 [node name="maxblood" type="Label" parent="ScrollContainer/HBoxContainer/TrackerCell15/cell/BloodPanel"]
